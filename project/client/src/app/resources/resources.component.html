@@ -1,1 +1,16 @@
-<p>resources works!</p>
+<nav class="nav">
+  <a
+    (click)="onClickHandler(link)"
+    *ngFor="let topic of topics"
+    [routerLink]="topic.url"
+    #link
+  >
+    {{ topic.label }}
+  </a>
+</nav>
+<section class="sub-header" *ngFor="let res of resource">
+  <p>for: {{ res.for }}</p>
+  <p>title: {{ res.label }}</p>
+  <p>info: {{ res.info }}</p>
+  <a [href]="res.resource"> {{ res.resource }}</a>
+</section>

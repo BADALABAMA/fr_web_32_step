@@ -5,5 +5,5 @@ const { app } = require('./app');
 const server = http.createServer(app);
 
 server.listen(3000, () => {
-    console.log("Server successfully running, at the moment!");
-})
+  console.log('Server successfully running, at the moment!');
+});
